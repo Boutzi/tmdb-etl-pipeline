@@ -5,3 +5,4 @@ __pycache__/
 data/
 *.parquet
 *.json.gz
+.idea/
