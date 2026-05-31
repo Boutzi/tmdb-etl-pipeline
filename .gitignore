@@ -6,3 +6,4 @@ data/
 *.parquet
 *.json.gz
 .idea/
+config/airflow.cfg
