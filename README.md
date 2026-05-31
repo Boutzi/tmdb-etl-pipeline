@@ -108,6 +108,8 @@ AWS_SECRET_ACCESS_KEY=
 AWS_REGION=eu-west-3
 S3_BUCKET_RAW=tmdb-etl-raw-dev
 S3_BUCKET_PROCESSED=tmdb-etl-processed-dev
+AIRFLOW_UID=
+FERNET_KEY=
 ```
 
 ### Run

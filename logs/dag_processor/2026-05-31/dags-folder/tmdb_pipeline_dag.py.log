@@ -549,3 +549,13 @@
 {"timestamp":"2026-05-31T16:23:10.814118Z","level":"info","event":"Found credentials in environment variables.","logger":"botocore.credentials","filename":"credentials.py","lineno":1252}
 {"timestamp":"2026-05-31T16:23:41.741590Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/tmdb_pipeline_dag.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
 {"timestamp":"2026-05-31T16:23:41.820639Z","level":"info","event":"Found credentials in environment variables.","logger":"botocore.credentials","filename":"credentials.py","lineno":1252}
+{"timestamp":"2026-05-31T16:24:12.725710Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/tmdb_pipeline_dag.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-31T16:24:12.793255Z","level":"info","event":"Found credentials in environment variables.","logger":"botocore.credentials","filename":"credentials.py","lineno":1252}
+{"timestamp":"2026-05-31T16:24:43.287256Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/tmdb_pipeline_dag.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-31T16:24:43.368228Z","level":"info","event":"Found credentials in environment variables.","logger":"botocore.credentials","filename":"credentials.py","lineno":1252}
+{"timestamp":"2026-05-31T16:25:13.567235Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/tmdb_pipeline_dag.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-31T16:25:13.648155Z","level":"info","event":"Found credentials in environment variables.","logger":"botocore.credentials","filename":"credentials.py","lineno":1252}
+{"timestamp":"2026-05-31T16:25:44.485990Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/tmdb_pipeline_dag.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-31T16:25:44.559918Z","level":"info","event":"Found credentials in environment variables.","logger":"botocore.credentials","filename":"credentials.py","lineno":1252}
+{"timestamp":"2026-05-31T16:26:15.489956Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/tmdb_pipeline_dag.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-31T16:26:15.571337Z","level":"info","event":"Found credentials in environment variables.","logger":"botocore.credentials","filename":"credentials.py","lineno":1252}
