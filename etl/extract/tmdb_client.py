@@ -22,6 +22,12 @@ def fetch_movies():
         time.sleep(0.25)
     return movies
 
-if __name__ == "__main__":
+def upload_genres_wrapper():
     upload_to_s3(fetch_genres(), "tmdb-etl-raw-dev", f"genres/{date.today()}/genres.json")
+
+def upload_movies_wrapper():
     upload_to_s3(fetch_movies(), "tmdb-etl-raw-dev", f"movies/{date.today()}/movies.json")
+
+if __name__ == "__main__":
+    upload_genres_wrapper()
+    upload_movies_wrapper()

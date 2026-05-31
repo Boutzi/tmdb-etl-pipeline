@@ -126,7 +126,7 @@ python -m etl.extract.tmdb_client
 - [x] TMDB API extract (genres + 10K movies)
 - [x] Raw upload to S3 Data Lake
 - [x] AWS Glue transform (JSON → Parquet)
-- [ ] Apache Airflow orchestration (Docker)
+- [x] Apache Airflow orchestration (Docker)
 - [ ] Snowflake Data Warehouse setup
 - [ ] dbt dimensional models & tests
 - [ ] Analytical queries & insights
@@ -140,5 +140,9 @@ python -m etl.extract.tmdb_client
 - ~10 000 movies, full load + incremental updates every 3 days
 
 ---
+
+## Pipeline en action
+
+![Airflow DAG](docs/screenshot-airflow.png)
 
 *Built as a data engineering portfolio project.*
