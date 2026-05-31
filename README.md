@@ -125,7 +125,7 @@ python -m etl.extract.tmdb_client
 - [x] AWS S3 buckets & IAM setup
 - [x] TMDB API extract (genres + 10K movies)
 - [x] Raw upload to S3 Data Lake
-- [ ] AWS Glue transform (JSON → Parquet)
+- [x] AWS Glue transform (JSON → Parquet)
 - [ ] Apache Airflow orchestration (Docker)
 - [ ] Snowflake Data Warehouse setup
 - [ ] dbt dimensional models & tests
