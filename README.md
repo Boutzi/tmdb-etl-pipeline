@@ -65,6 +65,7 @@ tmdb-etl-pipeline/
 │   └── load/              # Snowflake loader
 ├── glue_jobs/             # AWS Glue scripts
 ├── dbt/                   # dbt models & tests
+├── sql/                   # Snowflake setup scripts
 ├── tests/                 # Unit tests
 ├── utils/                 # Shared utilities (S3, HTTP)
 ├── .env.example           # Environment variables template
@@ -79,8 +80,10 @@ tmdb-etl-pipeline/
 ### Prerequisites
 
 - Python 3.12+
-- AWS account with S3 access
+- AWS account with S3 and Glue access
 - TMDB API account
+- Snowflake account
+- Docker Desktop
 
 ### Installation
 
@@ -115,8 +118,14 @@ FERNET_KEY=
 ### Run
 
 ```bash
-# Extract & load to S3
+# 1. Extract & load raw data to S3
 python -m etl.extract.tmdb_client
+
+# 2. Start Airflow (orchestrates Glue crawler + jobs)
+docker compose up -d
+
+# 3. Snowflake setup
+# Run sql/snowflake_setup.sql in your Snowflake worksheet
 ```
 
 ---
@@ -129,7 +138,7 @@ python -m etl.extract.tmdb_client
 - [x] Raw upload to S3 Data Lake
 - [x] AWS Glue transform (JSON → Parquet)
 - [x] Apache Airflow orchestration (Docker)
-- [ ] Snowflake Data Warehouse setup
+- [x] Snowflake Data Warehouse setup
 - [ ] dbt dimensional models & tests
 - [ ] Analytical queries & insights
 
