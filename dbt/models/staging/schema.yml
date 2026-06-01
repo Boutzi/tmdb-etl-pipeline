@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: staging
+    database: tmdb_etl
+    schema: staging
+    tables:
+      - name: movies
+      - name: genres
+
+models:
+  - name: stg_movies
+    columns:
+      - name: id
+        tests:
+          - not_null
+          - unique
+      - name: title
+        tests:
+          - not_null
+
+  - name: stg_genres
+    columns:
+      - name: id
+        tests:
+          - not_null
+          - unique

@@ -54,27 +54,6 @@ Analytics
 
 ---
 
-## Project Structure
-
-```
-tmdb-etl-pipeline/
-├── dags/                  # Airflow DAGs
-├── etl/
-│   ├── extract/           # TMDB API client
-│   ├── transform/         # Data transformations
-│   └── load/              # Snowflake loader
-├── glue_jobs/             # AWS Glue scripts
-├── dbt/                   # dbt models & tests
-├── sql/                   # Snowflake setup scripts
-├── tests/                 # Unit tests
-├── utils/                 # Shared utilities (S3, HTTP)
-├── .env.example           # Environment variables template
-├── docker-compose.yml     # Airflow local setup
-└── requirements.txt
-```
-
----
-
 ## Getting Started
 
 ### Prerequisites
@@ -139,7 +118,7 @@ docker compose up -d
 - [x] AWS Glue transform (JSON → Parquet)
 - [x] Apache Airflow orchestration (Docker)
 - [x] Snowflake Data Warehouse setup
-- [ ] dbt dimensional models & tests
+- [x] dbt dimensional models & tests
 - [ ] Analytical queries & insights
 
 ---
@@ -153,7 +132,16 @@ docker compose up -d
 ---
 
 ## Pipeline en action
-
+#### AirFlow
 ![Airflow DAG](docs/screenshot-airflow.png)
+#### dbt
+![dbt](docs/screenshot-dbt.png)
 
+## Data Modelling
+
+`fact_movies` is intentionally denormalized — each movie appears once per genre.
+This structure enables efficient aggregations by genre (e.g. top-rated genres, 
+most popular genre per year) without complex array parsing at query time.
+
+---
 *Built as a data engineering portfolio project.*

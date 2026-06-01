@@ -64,7 +64,6 @@ CREATE STORAGE INTEGRATION tmdb_s3_integration
 
 DESC INTEGRATION tmdb_s3_integration;
 
-
 -- ------------------------------------------------------------
 -- 4. EXTERNAL STAGE
 -- Points to the processed S3 bucket using the storage integration
@@ -95,7 +94,8 @@ MATCH_BY_COLUMN_NAME = CASE_INSENSITIVE;
 -- Genres: the Parquet file stores all genres as a nested array
 -- FLATTEN is required to explode the array into individual rows
 -- Note: replace the filename with the actual Parquet file name from LIST output
-TRUNCATE TABLE tmdb_etl.staging.genres;
+
+TRUNCATE TABLE tmdb_etl.staging.genres; -- Delete all rows from table (if needed)
 
 INSERT INTO tmdb_etl.staging.genres (id, name)
 SELECT
